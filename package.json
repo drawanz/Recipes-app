@@ -31,6 +31,7 @@
     "websocket-extensions": ">=0.1.4"
   },
   "scripts": {
+    "homepage": "http://drawanz.github.io/Recipes-app",
     "cy": "cypress run",
     "cy:open": "cypress open",
     "start": "react-scripts start",
@@ -39,10 +40,9 @@
     "test-coverage": "react-scripts test --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js,.jsx",
-    "lint:styles": "npx stylelint '**/*.css'"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "lint:styles": "npx stylelint '**/*.css'",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
@@ -64,6 +64,7 @@
     "eslint-config-trybe-frontend": "1.2.3",
     "eslint-plugin-react-hooks": "^4.2.0",
     "fs-extra": "^9.0.1",
+    "gh-pages": "^4.0.0",
     "mocha": "^8.0.1",
     "mochawesome": "^6.1.1",
     "mochawesome-merge": "^4.1.0",
